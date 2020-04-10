@@ -1,10 +1,18 @@
 import React from 'react';
+import { Provider as StoreProvider } from 'mobx-react';
+
+// Stores
+import AppStore from './store/appStore';
+
+const stores = {
+  AppStore
+}
 
 function App() {
   return (
-    <div>
+    <StoreProvider {...stores} >
       Hos Tokolos
-    </div>
+    </StoreProvider>
   );
 }
 
