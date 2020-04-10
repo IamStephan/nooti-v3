@@ -1,0 +1,39 @@
+// Colors
+$primary: #F76AA9;
+$primary-highlight: #F9739E;
+$primary-accent: #FE838C;
+$dark: #282828;
+$light: #FAFAFA;
+
+// Gradients
+$primary-gradient: linear-gradient(90eg, $primary 0%, $primary-accent 100%);
+
+// Spacing
+$margin: 16;
+$padding: 16;
+
+// Borders
+$border-width: 1px;
+$border-style: solid;
+$border-radius: $margin;
+
+:export {
+  // Colors
+  primary: $primary;
+  primary-highlight: $primary-highlight;
+  primary-accent: $primary-accent;
+  dark: $dark;
+  light: $light;
+
+  // Gradients
+  primary-gradient: $primary-gradient;
+
+  // Spacing
+  margin: $margin;
+  padding: $padding;
+
+  // Borders
+  border-width: $border-width;
+  border-style: $border-style;
+  border-radius: $border-radius;
+}
