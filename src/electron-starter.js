@@ -16,7 +16,8 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width: 800,
         height: 600,
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
+        show: false
     });
 
     const startUrl = process.env.ELECTRON_START_URL || url.format({
@@ -25,6 +26,8 @@ function createWindow() {
         slashes: true
     });
     mainWindow.loadURL(startUrl);
+
+    mainWindow.on('ready-to-show', () => mainWindow.show())
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
